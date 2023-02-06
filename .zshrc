@@ -50,5 +50,7 @@ source <(ng completion script)
 #Bitwarden shell completion
 eval "$(bw completion --shell zsh); compdef _bw bw;"
 
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
