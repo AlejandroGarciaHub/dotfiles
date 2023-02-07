@@ -28,7 +28,6 @@ sudo ln -fs /usr/share/zoneinfo/America/Monterrey /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
 zshrc
-exec zsh
 
 # make directly highlighting readable - needs to be after zshrc line
 echo "" >> ~/.zshrc
@@ -39,3 +38,5 @@ echo 'LS_COLORS+=$_ls_colors' >> ~/.zshrc
 
 # set gitconfig defaults
 git config --global push.autoSetupRemote true
+
+echo "-----FINISH INSTALL DOTFILES------"
