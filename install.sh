@@ -27,7 +27,8 @@ zshrc() {
 sudo ln -fs /usr/share/zoneinfo/America/Monterrey /etc/localtime
 sudo dpkg-reconfigure --frontend noninteractive tzdata
 
-zsh
+zshrc
+exec zsh
 
 # make directly highlighting readable - needs to be after zshrc line
 echo "" >> ~/.zshrc
