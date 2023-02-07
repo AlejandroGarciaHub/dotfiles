@@ -35,8 +35,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 export CHROME_EXECUTABLE=/Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-export ZSH="${HOME}/.oh-my-zsh"
+
+export ZSH="$HOME/.oh-my-zsh"
+export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -54,3 +55,5 @@ eval "$(bw completion --shell zsh); compdef _bw bw;"
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+
+source ~/powerlevel10k/powerlevel10k.zsh-theme
