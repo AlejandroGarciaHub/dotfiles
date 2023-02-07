@@ -36,12 +36,14 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 export CHROME_EXECUTABLE=/Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge
 
 
+#ZSH
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+#Node
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
@@ -56,4 +58,5 @@ eval "$(bw completion --shell zsh); compdef _bw bw;"
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+#Rails
+export PATH="$HOME/.rbenv/versions/3.2.0/bin:$HOME/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/bin:$PATH"
