@@ -55,8 +55,15 @@ source <(ng completion script)
 eval "$(bw completion --shell zsh); compdef _bw bw;"
 
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 #Rails
 export PATH="$HOME/.rbenv/versions/3.2.0/bin:$HOME/.rbenv/versions/3.2.0/lib/ruby/gems/3.2.0/bin:$PATH"
+
+export EDITOR="code -w"
+
+# -------
+# Aliases
+# -------
+alias c="clear"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
