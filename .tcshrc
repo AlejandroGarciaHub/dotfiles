@@ -1,0 +1,14 @@
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if ( -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.csh" ) then
+    source "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/conda.csh"
+else
+    setenv PATH "/opt/homebrew/Caskroom/mambaforge/base/bin:$PATH"
+endif
+
+if [ -f "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh" ]; then
+    . "/opt/homebrew/Caskroom/mambaforge/base/etc/profile.d/mamba.sh"
+fi
+# <<< conda initialize <<<
+

@@ -1,11 +1,12 @@
-# Fig pre block. Keep at the top of this file.
-[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
+# Q pre block. Keep at the top of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.pre.zsh"
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
+
 
 eval "$(rbenv init - zsh)"
 # >>> conda initialize >>>
@@ -31,9 +32,17 @@ export PATH="/opt/homebrew/opt/libpcap/bin:$PATH"
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 export PATH="$PATH:$HOME/flutter/bin"
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/openjdk-8.jdk/Contents/Home
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home
+
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools"
+
 
 export CHROME_EXECUTABLE=/Applications/Microsoft\ Edge.app/Contents/MacOS/Microsoft\ Edge
+
+export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
 
 
 #ZSH
@@ -60,10 +69,21 @@ export PATH="$HOME/.rbenv/versions/3.2.0/bin:$HOME/.rbenv/versions/3.2.0/lib/rub
 
 export EDITOR="code -w"
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 # -------
 # Aliases
 # -------
 alias c="clear"
+alias spotx="bash <(curl -sSL https://spotx-official.github.io/run.sh)"
 
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
+source "/opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme"
+#export PATH="$PATH:/opt/homebrew/opt/openjdk@11/bin"
+#export PATH="/usr/bin:$PATH"
+#export PATH="$PATH:/usr/local/opt/openjdk@8/bin"
+
+# Q post block. Keep at the bottom of this file.
+[[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+eval "$(zoxide init --cmd cd zsh)"
+source <(fzf --zsh)

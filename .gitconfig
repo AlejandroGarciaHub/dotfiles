@@ -1,6 +1,14 @@
-[github]
-	user = alejandrogarciahub
-[init]
-	defaultBranch = main
-[push]
-	autoSetupRemote = true
+# This is Git's per-user configuration file.
+#[user]
+# Please adapt and uncomment the following lines:
+#	name = Miguel García
+#	email = contacto@alejandrohub.dev
+#[includeIf "gitdir:~/Documents/BBVA/"]
+[includeIf "hasconfig:remote.*.url:ssh://git@globaldevtools.bbva.com:*/**"]
+	path = ~/.gitconfig-bbva
+#[includeIf "gitdir:~/Documents/Dev/Repos/"]
+[includeIf "hasconfig:remote.*.url:git@gitlab.com:*/**"]
+	path = ~/.gitconfig-personal
+#[includeIf "gitdir:~/Documents/Dev/Repos/"]	
+[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+	path = ~/.gitconfig-personal
