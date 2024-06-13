@@ -6,9 +6,11 @@
 #[includeIf "gitdir:~/Documents/BBVA/"]
 [includeIf "hasconfig:remote.*.url:ssh://git@globaldevtools.bbva.com:*/**"]
 	path = ~/.gitconfig-bbva
-#[includeIf "gitdir:~/Documents/Dev/Repos/"]
-[includeIf "hasconfig:remote.*.url:git@gitlab.com:*/**"]
+[includeIf "hasconfig:remote.*.url:git@github.com*/**"]
 	path = ~/.gitconfig-personal
-#[includeIf "gitdir:~/Documents/Dev/Repos/"]	
-[includeIf "hasconfig:remote.*.url:git@github.com:*/**"]
+[includeIf "hasconfig:remote.*.url:https://github.com*/**"]
+	path = ~/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:git@gitlab.com*/**"]
+	path = ~/.gitconfig-personal
+[includeIf "hasconfig:remote.*.url:https://gitlab.com*/**"]
 	path = ~/.gitconfig-personal
