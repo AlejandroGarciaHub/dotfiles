@@ -49,6 +49,12 @@ export GROOVY_HOME=/opt/homebrew/opt/groovy/libexec
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+plugins=(git zsh-autosuggestions)
+
+
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -84,6 +90,9 @@ source "/opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme"
 
 # Q post block. Keep at the bottom of this file.
 [[ -f "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh" ]] && builtin source "${HOME}/Library/Application Support/amazon-q/shell/zshrc.post.zsh"
+
+eval $(thefuck --alias)
+eval $(thefuck --alias fk)
 
 eval "$(zoxide init --cmd cd zsh)"
 source <(fzf --zsh)
